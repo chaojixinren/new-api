@@ -348,36 +348,6 @@ const Home = () => {
                     )
                   )}
                 </div>
-
-                <div className='na-home-endpoint-card'>
-                  <div className='na-home-endpoint-header'>
-                    <span className='na-home-endpoint-label'>Base URL</span>
-                    <span className='na-home-endpoint-note'>
-                      {t('将你的应用指向这一个统一入口')}
-                    </span>
-                  </div>
-                  <Input
-                    readonly
-                    value={serverAddress}
-                    className='na-home-endpoint-input'
-                    size={isMobile ? 'default' : 'large'}
-                    suffix={
-                      <Button
-                        type='primary'
-                        theme='solid'
-                        onClick={handleCopyBaseURL}
-                        icon={<IconCopy />}
-                        className='na-home-copy-button'
-                        aria-label={t('复制基址')}
-                      />
-                    }
-                  />
-                  <div className='na-home-endpoint-meta'>
-                    <span className='na-bullet'></span>
-                    <span>{t('当前兼容端点')}</span>
-                    <code>{currentEndpoint}</code>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
