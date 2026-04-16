@@ -66,13 +66,13 @@ const ThemeToggle = ({ theme, onThemeToggle, t }) => {
     <Dropdown
       position='bottomRight'
       render={
-        <Dropdown.Menu>
+        <Dropdown.Menu className='na-dropdown-menu'>
           {themeOptions.map((option) => (
             <Dropdown.Item
               key={option.key}
               icon={option.icon}
               onClick={() => onThemeToggle(option.key)}
-              className={getItemClassName(theme === option.key)}
+              className={`na-dropdown-item ${getItemClassName(theme === option.key)}`}
             >
               <div className='flex flex-col'>
                 <span>{option.label}</span>
@@ -101,7 +101,7 @@ const ThemeToggle = ({ theme, onThemeToggle, t }) => {
           aria-label={t('切换主题')}
           theme='borderless'
           type='tertiary'
-          className='!p-1.5 !text-current focus:!bg-semi-color-fill-1 !rounded-full !bg-semi-color-fill-0 hover:!bg-semi-color-fill-1'
+          className='na-header-icon-button'
         />
       </span>
     </Dropdown>

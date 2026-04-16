@@ -1,0 +1,478 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776307188660,
+  "projectRoot": "/Users/chaoji_xinren/project/new-api",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Go",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "go.mod"
+        ]
+      },
+      {
+        "name": "C/C++",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "Makefile"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "go",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "make build",
+    "testCommand": "make test",
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "bin",
+      "docs"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "bin": {
+      "path": "bin",
+      "purpose": "Executable scripts",
+      "fileCount": 3,
+      "lastAccessed": 1776307188636,
+      "keyFiles": [
+        "migration_v0.2-v0.3.sql",
+        "migration_v0.3-v0.4.sql",
+        "time_test.sh"
+      ]
+    },
+    "common": {
+      "path": "common",
+      "purpose": null,
+      "fileCount": 44,
+      "lastAccessed": 1776307188637,
+      "keyFiles": [
+        "api_type.go",
+        "audio.go",
+        "body_storage.go",
+        "constants.go",
+        "copy.go"
+      ]
+    },
+    "constant": {
+      "path": "constant",
+      "purpose": null,
+      "fileCount": 14,
+      "lastAccessed": 1776307188637,
+      "keyFiles": [
+        "README.md",
+        "api_type.go",
+        "azure.go",
+        "cache_key.go",
+        "channel.go"
+      ]
+    },
+    "controller": {
+      "path": "controller",
+      "purpose": null,
+      "fileCount": 56,
+      "lastAccessed": 1776307188637,
+      "keyFiles": [
+        "billing.go",
+        "channel-billing.go",
+        "channel-test.go",
+        "channel.go",
+        "channel_affinity_cache.go"
+      ]
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 4,
+      "lastAccessed": 1776307188638,
+      "keyFiles": [
+        "ionet-client.md",
+        "translation-glossary.fr.md",
+        "translation-glossary.md",
+        "translation-glossary.ru.md"
+      ]
+    },
+    "dto": {
+      "path": "dto",
+      "purpose": null,
+      "fileCount": 29,
+      "lastAccessed": 1776307188638,
+      "keyFiles": [
+        "audio.go",
+        "channel_settings.go",
+        "claude.go",
+        "embedding.go",
+        "error.go"
+      ]
+    },
+    "electron": {
+      "path": "electron",
+      "purpose": null,
+      "fileCount": 12,
+      "lastAccessed": 1776307188638,
+      "keyFiles": [
+        "README.md",
+        "build.sh",
+        "create-tray-icon.js",
+        "entitlements.mac.plist",
+        "icon.png"
+      ]
+    },
+    "i18n": {
+      "path": "i18n",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1776307188639,
+      "keyFiles": [
+        "i18n.go",
+        "keys.go"
+      ]
+    },
+    "logger": {
+      "path": "logger",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1776307188639,
+      "keyFiles": [
+        "logger.go"
+      ]
+    },
+    "middleware": {
+      "path": "middleware",
+      "purpose": "Middleware",
+      "fileCount": 21,
+      "lastAccessed": 1776307188641,
+      "keyFiles": [
+        "auth.go",
+        "body_cleanup.go",
+        "cache.go",
+        "cors.go",
+        "disable-cache.go"
+      ]
+    },
+    "model": {
+      "path": "model",
+      "purpose": null,
+      "fileCount": 35,
+      "lastAccessed": 1776307188643,
+      "keyFiles": [
+        "ability.go",
+        "channel.go",
+        "channel_cache.go",
+        "channel_satisfy.go",
+        "checkin.go"
+      ]
+    },
+    "oauth": {
+      "path": "oauth",
+      "purpose": null,
+      "fileCount": 8,
+      "lastAccessed": 1776307188644,
+      "keyFiles": [
+        "discord.go",
+        "generic.go",
+        "github.go",
+        "linuxdo.go",
+        "oidc.go"
+      ]
+    },
+    "pkg": {
+      "path": "pkg",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1776307188644,
+      "keyFiles": []
+    },
+    "relay": {
+      "path": "relay",
+      "purpose": null,
+      "fileCount": 14,
+      "lastAccessed": 1776307188645,
+      "keyFiles": [
+        "audio_handler.go",
+        "chat_completions_via_responses.go",
+        "claude_handler.go",
+        "compatible_handler.go",
+        "embedding_handler.go"
+      ]
+    },
+    "router": {
+      "path": "router",
+      "purpose": null,
+      "fileCount": 6,
+      "lastAccessed": 1776307188646,
+      "keyFiles": [
+        "api-router.go",
+        "dashboard.go",
+        "main.go",
+        "relay-router.go",
+        "video-router.go"
+      ]
+    },
+    "service": {
+      "path": "service",
+      "purpose": null,
+      "fileCount": 46,
+      "lastAccessed": 1776307188646,
+      "keyFiles": [
+        "audio.go",
+        "billing.go",
+        "billing_session.go",
+        "channel.go",
+        "channel_affinity.go"
+      ]
+    },
+    "setting": {
+      "path": "setting",
+      "purpose": null,
+      "fileCount": 9,
+      "lastAccessed": 1776307188646,
+      "keyFiles": [
+        "auto_group.go",
+        "chat.go",
+        "midjourney.go",
+        "payment_creem.go",
+        "payment_stripe.go"
+      ]
+    },
+    "types": {
+      "path": "types",
+      "purpose": "Type definitions",
+      "fileCount": 9,
+      "lastAccessed": 1776307188647,
+      "keyFiles": [
+        "channel_error.go",
+        "error.go",
+        "file_data.go",
+        "file_source.go",
+        "price_data.go"
+      ]
+    },
+    "web": {
+      "path": "web",
+      "purpose": null,
+      "fileCount": 12,
+      "lastAccessed": 1776307188647,
+      "keyFiles": [
+        "bun.lock",
+        "i18next.config.js",
+        "index.html",
+        "jsconfig.json",
+        "package.json"
+      ]
+    },
+    "setting/config": {
+      "path": "setting/config",
+      "purpose": "Configuration files",
+      "fileCount": 1,
+      "lastAccessed": 1776307188660,
+      "keyFiles": [
+        "config.go"
+      ]
+    },
+    "web/public": {
+      "path": "web/public",
+      "purpose": "Public files",
+      "fileCount": 9,
+      "lastAccessed": 1776307188660,
+      "keyFiles": [
+        "azure_model_name.png",
+        "cover-4.webp",
+        "favicon.ico"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "web/src/index.css",
+      "accessCount": 23,
+      "lastAccessed": 1776318437869,
+      "type": "directory"
+    },
+    {
+      "path": "web/src",
+      "accessCount": 10,
+      "lastAccessed": 1776307543088,
+      "type": "directory"
+    },
+    {
+      "path": "web/src/pages/Home/index.jsx",
+      "accessCount": 10,
+      "lastAccessed": 1776318342813,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 7,
+      "lastAccessed": 1776307346909,
+      "type": "directory"
+    },
+    {
+      "path": "web/src/index.jsx",
+      "accessCount": 4,
+      "lastAccessed": 1776307488340,
+      "type": "file"
+    },
+    {
+      "path": "web/src/components/layout/headerbar/index.jsx",
+      "accessCount": 4,
+      "lastAccessed": 1776308183153,
+      "type": "file"
+    },
+    {
+      "path": "web/src/components/home/PretextAsciiHero.jsx",
+      "accessCount": 4,
+      "lastAccessed": 1776318421199,
+      "type": "file"
+    },
+    {
+      "path": "web/tailwind.config.js",
+      "accessCount": 3,
+      "lastAccessed": 1776307488311,
+      "type": "file"
+    },
+    {
+      "path": "web/src/context/Theme/index.jsx",
+      "accessCount": 3,
+      "lastAccessed": 1776307488354,
+      "type": "file"
+    },
+    {
+      "path": "web/src/components/layout/SiderBar.jsx",
+      "accessCount": 3,
+      "lastAccessed": 1776307495281,
+      "type": "file"
+    },
+    {
+      "path": "web/src/components/layout/PageLayout.jsx",
+      "accessCount": 3,
+      "lastAccessed": 1776307495315,
+      "type": "file"
+    },
+    {
+      "path": "web/src/components/common/markdown/markdown.css",
+      "accessCount": 3,
+      "lastAccessed": 1776307534168,
+      "type": "file"
+    },
+    {
+      "path": "web",
+      "accessCount": 2,
+      "lastAccessed": 1776307437564,
+      "type": "directory"
+    },
+    {
+      "path": "web/src/components/layout/Footer.jsx",
+      "accessCount": 2,
+      "lastAccessed": 1776307495369,
+      "type": "file"
+    },
+    {
+      "path": "web/src/pages",
+      "accessCount": 2,
+      "lastAccessed": 1776308191391,
+      "type": "directory"
+    },
+    {
+      "path": "web/package.json",
+      "accessCount": 1,
+      "lastAccessed": 1776307321440,
+      "type": "file"
+    },
+    {
+      "path": "web/src/App.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1776307321670,
+      "type": "file"
+    },
+    {
+      "path": "web/vite.config.js",
+      "accessCount": 1,
+      "lastAccessed": 1776307338447,
+      "type": "file"
+    },
+    {
+      "path": "web/src/components/layout/headerbar/ThemeToggle.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1776307346829,
+      "type": "file"
+    },
+    {
+      "path": "web/postcss.config.js",
+      "accessCount": 1,
+      "lastAccessed": 1776307346848,
+      "type": "file"
+    },
+    {
+      "path": "web/src/pages/About/index.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1776307512202,
+      "type": "file"
+    },
+    {
+      "path": "web/src/components/common/ui/SelectableButtonGroup.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1776307512314,
+      "type": "file"
+    },
+    {
+      "path": "web/src/components/topup/RechargeCard.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1776307512366,
+      "type": "file"
+    },
+    {
+      "path": "web/src/pages/Pricing/index.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1776307534126,
+      "type": "file"
+    },
+    {
+      "path": "web/src/pages/Dashboard/index.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1776307534181,
+      "type": "file"
+    },
+    {
+      "path": "web/src/components/layout/headerbar",
+      "accessCount": 1,
+      "lastAccessed": 1776307543111,
+      "type": "directory"
+    },
+    {
+      "path": "web/src/components/settings/personal/components/UserInfoHeader.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1776307543146,
+      "type": "file"
+    },
+    {
+      "path": "web/src/components/table/model-pricing/layout/header/PricingVendorIntro.jsx",
+      "accessCount": 1,
+      "lastAccessed": 1776307543171,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

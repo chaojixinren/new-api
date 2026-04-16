@@ -19,7 +19,7 @@ const (
 	LangZhCN    = "zh-CN"
 	LangZhTW    = "zh-TW"
 	LangEn      = "en"
-	DefaultLang = LangEn // Fallback to English if language not supported
+	DefaultLang = LangZhCN // Default to Simplified Chinese when no preference is available
 )
 
 //go:embed locales/*.yaml

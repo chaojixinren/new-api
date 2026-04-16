@@ -28,12 +28,22 @@ import zhTWTranslation from './locales/zh-TW.json';
 import ruTranslation from './locales/ru.json';
 import jaTranslation from './locales/ja.json';
 import viTranslation from './locales/vi.json';
-import { supportedLanguages } from './language';
+import { normalizeLanguage, supportedLanguages } from './language';
+
+const getInitialLanguage = () => {
+  if (typeof window === 'undefined') {
+    return 'zh-CN';
+  }
+
+  const savedLanguage = window.localStorage.getItem('i18nextLng');
+  return normalizeLanguage(savedLanguage) || 'zh-CN';
+};
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    lng: getInitialLanguage(),
     load: 'currentOnly',
     supportedLngs: supportedLanguages,
     resources: {

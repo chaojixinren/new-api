@@ -58,17 +58,17 @@ const UserArea = ({
           position='bottomRight'
           getPopupContainer={() => dropdownRef.current}
           render={
-            <Dropdown.Menu className='!bg-semi-color-bg-overlay !border-semi-color-border !shadow-lg !rounded-lg dark:!bg-gray-700 dark:!border-gray-600'>
+            <Dropdown.Menu className='na-dropdown-menu'>
               <Dropdown.Item
                 onClick={() => {
                   navigate('/console/personal');
                 }}
-                className='!px-3 !py-1.5 !text-sm !text-semi-color-text-0 hover:!bg-semi-color-fill-1 dark:!text-gray-200 dark:hover:!bg-blue-500 dark:hover:!text-white'
+                className='na-dropdown-item'
               >
                 <div className='flex items-center gap-2'>
                   <IconUserSetting
                     size='small'
-                    className='text-gray-500 dark:text-gray-400'
+                    className='text-semi-color-text-2'
                   />
                   <span>{t('个人设置')}</span>
                 </div>
@@ -77,13 +77,10 @@ const UserArea = ({
                 onClick={() => {
                   navigate('/console/token');
                 }}
-                className='!px-3 !py-1.5 !text-sm !text-semi-color-text-0 hover:!bg-semi-color-fill-1 dark:!text-gray-200 dark:hover:!bg-blue-500 dark:hover:!text-white'
+                className='na-dropdown-item'
               >
                 <div className='flex items-center gap-2'>
-                  <IconKey
-                    size='small'
-                    className='text-gray-500 dark:text-gray-400'
-                  />
+                  <IconKey size='small' className='text-semi-color-text-2' />
                   <span>{t('令牌管理')}</span>
                 </div>
               </Dropdown.Item>
@@ -91,25 +88,19 @@ const UserArea = ({
                 onClick={() => {
                   navigate('/console/topup');
                 }}
-                className='!px-3 !py-1.5 !text-sm !text-semi-color-text-0 hover:!bg-semi-color-fill-1 dark:!text-gray-200 dark:hover:!bg-blue-500 dark:hover:!text-white'
+                className='na-dropdown-item'
               >
                 <div className='flex items-center gap-2'>
                   <IconCreditCard
                     size='small'
-                    className='text-gray-500 dark:text-gray-400'
+                    className='text-semi-color-text-2'
                   />
                   <span>{t('钱包管理')}</span>
                 </div>
               </Dropdown.Item>
-              <Dropdown.Item
-                onClick={logout}
-                className='!px-3 !py-1.5 !text-sm !text-semi-color-text-0 hover:!bg-semi-color-fill-1 dark:!text-gray-200 dark:hover:!bg-red-500 dark:hover:!text-white'
-              >
+              <Dropdown.Item onClick={logout} className='na-dropdown-item'>
                 <div className='flex items-center gap-2'>
-                  <IconExit
-                    size='small'
-                    className='text-gray-500 dark:text-gray-400'
-                  />
+                  <IconExit size='small' className='text-semi-color-text-2' />
                   <span>{t('退出')}</span>
                 </div>
               </Dropdown.Item>
@@ -119,24 +110,21 @@ const UserArea = ({
           <Button
             theme='borderless'
             type='tertiary'
-            className='flex items-center gap-1.5 !p-1 !rounded-full hover:!bg-semi-color-fill-1 dark:hover:!bg-gray-700 !bg-semi-color-fill-0 dark:!bg-semi-color-fill-1 dark:hover:!bg-semi-color-fill-2'
+            className='na-header-user-button'
           >
             <Avatar
               size='extra-small'
               color={stringToColor(userState.user.username)}
-              className='mr-1'
+              className='mr-1 shadow-sm'
             >
               {userState.user.username[0].toUpperCase()}
             </Avatar>
             <span className='hidden md:inline'>
-              <Typography.Text className='!text-xs !font-medium !text-semi-color-text-1 dark:!text-gray-300 mr-1'>
+              <Typography.Text className='mr-1 !text-xs !font-medium !text-semi-color-text-1'>
                 {userState.user.username}
               </Typography.Text>
             </span>
-            <ChevronDown
-              size={14}
-              className='text-xs text-semi-color-text-2 dark:text-gray-400'
-            />
+            <ChevronDown size={14} className='text-xs text-semi-color-text-2' />
           </Button>
         </Dropdown>
       </div>
@@ -144,53 +132,30 @@ const UserArea = ({
   } else {
     const showRegisterButton = !isSelfUseMode;
 
-    const commonSizingAndLayoutClass =
-      'flex items-center justify-center !py-[10px] !px-1.5';
-
-    const loginButtonSpecificStyling =
-      '!bg-semi-color-fill-0 dark:!bg-semi-color-fill-1 hover:!bg-semi-color-fill-1 dark:hover:!bg-gray-700 transition-colors';
-    let loginButtonClasses = `${commonSizingAndLayoutClass} ${loginButtonSpecificStyling}`;
-
-    let registerButtonClasses = `${commonSizingAndLayoutClass}`;
-
-    const loginButtonTextSpanClass =
-      '!text-xs !text-semi-color-text-1 dark:!text-gray-300 !p-1.5';
-    const registerButtonTextSpanClass = '!text-xs !text-white !p-1.5';
-
-    if (showRegisterButton) {
-      if (isMobile) {
-        loginButtonClasses += ' !rounded-full';
-      } else {
-        loginButtonClasses += ' !rounded-l-full !rounded-r-none';
-      }
-      registerButtonClasses += ' !rounded-r-full !rounded-l-none';
-    } else {
-      loginButtonClasses += ' !rounded-full';
-    }
-
     return (
-      <div className='flex items-center'>
+      <div className='flex items-center gap-2'>
         <Link to='/login' className='flex'>
           <Button
             theme='borderless'
             type='tertiary'
-            className={loginButtonClasses}
+            className='na-header-auth-button na-header-auth-button-secondary'
           >
-            <span className={loginButtonTextSpanClass}>{t('登录')}</span>
+            <span className='na-header-auth-label'>{t('登录')}</span>
           </Button>
         </Link>
         {showRegisterButton && (
-          <div className='hidden md:block'>
-            <Link to='/register' className='flex -ml-px'>
-              <Button
-                theme='solid'
-                type='primary'
-                className={registerButtonClasses}
-              >
-                <span className={registerButtonTextSpanClass}>{t('注册')}</span>
-              </Button>
-            </Link>
-          </div>
+          <Link
+            to='/register'
+            className={`flex ${isMobile ? 'hidden md:flex' : ''}`}
+          >
+            <Button
+              theme='solid'
+              type='primary'
+              className='na-header-auth-button na-header-auth-button-primary'
+            >
+              <span className='na-header-auth-label'>{t('注册')}</span>
+            </Button>
+          </Link>
         )}
       </div>
     );
